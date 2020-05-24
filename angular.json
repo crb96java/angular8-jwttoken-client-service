@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-jwttoken-client-service"
+    }
+  },
+  "defaultProject": "angular-jwttoken-client-service",
+  "cli": {
+    "analytics": false
+  }
 }
