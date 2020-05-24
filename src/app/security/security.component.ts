@@ -21,6 +21,7 @@ export class SecurityComponent implements OnInit {
     this.getAccessToken(this.authRequest);
   }
 
+//get the jwt token from the backend
 public getAccessToken(authRequest){
 let resp=this.service.generateToken(authRequest);
 //resp.subscribe(data=>console.log("Token + "+data));
@@ -30,6 +31,7 @@ resp.subscribe(data=>this.accessApi(data));
 
 public accessApi(token){
 let resp=this.service.welcome(token);
+//resp.subscribe(data=>console.log("Response + "+data));
 resp.subscribe(data=>this.response=data);
   }
  }
