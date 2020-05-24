@@ -21,14 +21,14 @@ export class SecurityComponent implements OnInit {
     this.getAccessToken(this.authRequest);
   }
 
-  public getAccessToken(authRequest){
+public getAccessToken(authRequest){
 let resp=this.service.generateToken(authRequest);
 //resp.subscribe(data=>console.log("Token + "+data));
 resp.subscribe(data=>this.accessApi(data));
   }
 
 
-  public accessApi(token){
+public accessApi(token){
 let resp=this.service.welcome(token);
 resp.subscribe(data=>this.response=data);
   }
